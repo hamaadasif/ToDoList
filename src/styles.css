@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, .app-container {
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+.header {
+  color: #bb86fc;
+  margin-bottom: 30px;
+  text-align: center; 
+}
+
+.new-item-form {
+  margin-bottom: 30px;
+  padding: 10px;
+  background-color: #1c1e21;
+  border-radius: 5px;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+}
+
+.new-item-form input[type="text"], .new-item-form button {
+  width: 100%; 
+  padding: 10px;
+  margin-bottom: 10px; 
+}
+
+.new-item-form input[type="text"] {
+  background-color: #262626;
+  border: 1px solid #333;
+  border-radius: 4px;
+  color: #e0e0e0;
+}
+
+.new-item-form button {
+  background-color: #4caf50;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+.new-item-form button:hover {
+  background-color: #388e3c;
+}
+
+.new-item-form > *:last-child {
+  margin-bottom: 0;
+}
+
+.list {
+  width: 100%;
+  max-width: 600px;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.todo-item {
+  background-color: #1c1e21;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo-item label {
+  cursor: pointer;
+}
+
+.todo-item button {
+  background-color: #e53935;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 5px 8px;
+  font-size: 0.8em; 
+  margin: 0 5px;
+  line-height: 1;
+}
+
+.todo-item button:hover {
+  background-color: #b71c1c;
+}
+
+.todo-item input[type="checkbox"] {
+  margin-right: 15px;
+  accent-color: #4caf50;
+  cursor: pointer;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-danger {
+  background-color: #e53935;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #b71c1c;
+}
