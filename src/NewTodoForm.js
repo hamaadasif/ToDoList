@@ -1,16 +1,18 @@
-import { useState } from "react"
-import "./styles.css"
+import { useState } from "react";
+import "./styles.css";
 
 export function NewTodoForm({ onSubmit }) {
-  const [newItem, setNewItem] = useState("")
+  const [newItem, setNewItem] = useState("");
+  const [date, setDate] = useState("");
 
   function handleSubmit(e) {
-    e.preventDefault()
-    if (newItem === "") return
+    e.preventDefault();
+    if (newItem === "") return;
 
-    onSubmit(newItem)
+    onSubmit({ title: newItem, date });
 
-    setNewItem("")
+    setNewItem("");
+    setDate("");
   }
 
   return (
@@ -23,8 +25,14 @@ export function NewTodoForm({ onSubmit }) {
           type="text"
           id="item"
         />
+        <input
+          type="date"
+          value={date}
+          onChange={e => setDate(e.target.value)}
+          id="date"
+        />
       </div>
       <button className="btn">Add</button>
     </form>
-  )
+  );
 }

@@ -8,13 +8,13 @@ export function TodoList({ todos, toggleTodo, deleteTodo }) {
       {todos.map(todo => {
         return (
           <TodoItem
-            {...todo}
+            {...todo} 
             key={todo.id}
             toggleTodo={toggleTodo}
             deleteTodo={deleteTodo}
           />
-        )
+        );
       })}
     </ul>
-  )
+  );
 }

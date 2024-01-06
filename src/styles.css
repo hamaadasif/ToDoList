@@ -34,6 +34,10 @@ body, .app-container {
   max-width: 300px;
 }
 
+.new-item-form .form-row {
+  display: flex;
+}
+
 .new-item-form input[type="text"], .new-item-form button {
   width: 100%; 
   padding: 10px;
@@ -43,8 +47,25 @@ body, .app-container {
 .new-item-form input[type="text"] {
   background-color: #262626;
   border: 1px solid #333;
-  border-radius: 4px;
+  border-radius: 4px 0 0 4px;
+  border-right: none;
   color: #e0e0e0;
+  flex: 2.5;
+}
+
+.new-item-form input[type="date"] {
+  background-color: #262626;
+  border: 1px solid #333;
+  border-radius: 0 4px 4px 0;
+  margin-left: -1px; 
+  color: #e0e0e0;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.new-item-form input[type="date"]:hover {
+  border-color: #4caf50;
 }
 
 .new-item-form button {
@@ -95,6 +116,12 @@ body, .app-container {
   font-size: 0.8em; 
   margin: 0 5px;
   line-height: 1;
+}
+
+.todo-date {
+  color: #a0a0a0;
+  font-size: 0.9em;
+  margin-right: 10px;
 }
 
 .todo-item button:hover {

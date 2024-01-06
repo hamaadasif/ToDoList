@@ -15,14 +15,14 @@ export default function App() {
     localStorage.setItem("ITEMS", JSON.stringify(todos))
   }, [todos])
 
-  function addTodo(title) {
+  function addTodo({ title, date }) {
     setTodos(currentTodos => {
       return [
         ...currentTodos,
-        { id: crypto.randomUUID(), title, completed: false },
-      ]
-    })
-  }
+        { id: crypto.randomUUID(), title, completed: false, date },
+      ];
+    });
+  }  
 
   function toggleTodo(id, completed) {
     setTodos(currentTodos => {
